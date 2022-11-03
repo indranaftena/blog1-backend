@@ -31,9 +31,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['indranaftena.pythonanywhere.com']
 
 
 # Application definition
@@ -129,6 +129,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# [edited]
+STATIC_ROOT = BASE_DIR / "static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -158,4 +160,5 @@ AUTHENTICATION_BACKENDS = [
 
 # [edited] CORS config
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ("http://localhost:5173",)
+CORS_ORIGIN_WHITELIST = ("https://naftena.netlify.app",)
+# CORS_ORIGIN_WHITELIST = ("http://localhost:5173",) # for local
